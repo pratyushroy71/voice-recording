@@ -1,0 +1,32 @@
+
+<div class="recorder-container">
+    <h1 class="title">Voice Recorder</h1>
+    <div class="controls">
+      <button mat-raised-button color="primary" (click)="startRecording()" [disabled]="isRecording">
+        Start Recording
+      </button>
+      <button mat-raised-button color="warn" (click)="stopRecording()" [disabled]="!isRecording">
+        Stop Recording
+      </button>
+      <button mat-raised-button color="accent" (click)="resetRecording()" [disabled]="!transcript">
+        Reset
+      </button>
+      <button mat-raised-button color="accent" (click)="makePDF()" [disabled]="!transcript" class="pdf-button">
+        <span class="material-icons">picture_as_pdf</span>
+        Make PDF
+      </button>
+    </div>
+  
+    <div class="listening-indicator" *ngIf="isRecording">
+      <span class="material-icons">mic</span>
+      <p>Listening...</p>
+    </div>
+  
+    <mat-card *ngIf="transcript" class="transcript-card">
+      <mat-card-title>Transcript</mat-card-title>
+      <mat-card-content>
+        <p>{{ transcript }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
