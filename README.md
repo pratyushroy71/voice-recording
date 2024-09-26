@@ -15,11 +15,11 @@ Web Speech API: To enable real-time voice recognition and transcription capabili
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/yourusername/voice-to-text-app.git
+git clone https://github.com/pratyush71/voice-recording.git
 Navigate to the project directory:
 bash
 Copy code
-cd voice-to-text-app
+cd voice-recording
 Install the dependencies:
 bash
 Copy code
